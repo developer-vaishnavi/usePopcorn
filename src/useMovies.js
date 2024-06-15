@@ -28,7 +28,7 @@ export function useMovies(query, callback) {
           setMovies(data.Search);
           setError("");
         } catch (err) {
-          if (err.name != "AbortError") setError(err.message);
+          if (err.name !== "AbortError") setError(err.message);
         } finally {
           setLoading(false);
         }
